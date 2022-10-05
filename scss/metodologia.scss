@@ -1,0 +1,174 @@
+/* vista mobile */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .body__metodologia {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "metodologia__title"
+        "presentacion"
+        "compromiso"
+        "proceso"
+        "etapas"
+        "footer";
+        grid-template-columns: 1;
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+    header {
+        grid-area: header;
+    }
+    .metodologia__title {
+        grid-area: metodologia__title;
+        padding-top: 160px;
+        font-size: 35px;
+        font-style: normal;
+        letter-spacing: 10px;
+        color: $color-trans;
+        display: flex;
+        justify-content: center;
+    }
+    .presentacion {
+        grid-area: presentacion;
+        padding-top: 110px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .presentacion__div {
+            text-align: center;
+        }
+        .presentacion__img {
+            width: 400px  
+        }
+    }
+    .compromiso {
+        grid-area: compromiso;
+    }
+    .proceso {
+        grid-area: proceso;
+        padding-top: 160px;
+        font-size: 20px;
+        font-style: normal;
+        letter-spacing: 10px;
+        color: $color-trans;
+        display: flex;
+        justify-content: center;
+    }
+    .etapas {
+        grid-area: etapas;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 100px;
+        .etapa__0 {
+            width: 300px;
+            padding-top: 30px;
+            text-align: center;
+            .etapa__img {
+                width: 200px;
+                }
+            .etapa__title {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+    footer {
+        grid-area: footer;
+    }
+}
+    /* vista desktop */
+@media only screen and (min-width: 768px) {
+    .body__metodologia {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "metodologia__title"
+        "presentacion"
+        "compromiso"
+        "proceso"
+        "etapas"
+        "footer";
+        grid-template-columns: 1;
+        grid-template-rows: auto auto auto auto auto auto auto;
+    }
+    header {
+        grid-area: header;
+    }
+    .metodologia__title {
+        grid-area: metodologia__title;
+        padding-top: 160px;
+        font-size: 35px;
+        font-style: normal;
+        letter-spacing: 10px;
+        color: $color-trans;
+        display: flex;
+        justify-content: center;
+    }
+    .presentacion {
+        grid-area: presentacion;
+        padding-top: 110px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .presentacion__div {
+            text-align: center;
+            & p {
+                width: 700px;
+            }
+        }
+        .presentacion__img {
+            width: 400px  
+        }
+    }
+    .compromiso {
+        grid-area: compromiso;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        & p {
+            width: 700px;
+            text-align: center;
+        }
+    }
+    .proceso {
+        grid-area: proceso;
+        padding-top: 160px;
+        font-size: 35px;
+        font-style: normal;
+        letter-spacing: 10px;
+        color: $color-trans;
+        display: flex;
+        justify-content: center;
+    }
+    .etapas {
+        grid-area: etapas;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 150px;
+        .etapa__0 {
+            padding-top: 70px;
+            display: flex;
+            text-align: center;
+            & .etapa__div {
+                padding-left: 20px;
+                text-align: left;
+                & p {
+                    width: 500px;
+                }
+            }
+            .etapa__img {
+                width: 200px;
+                }
+            .etapa__title {
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+    footer {
+        grid-area: footer;
+    }
+}

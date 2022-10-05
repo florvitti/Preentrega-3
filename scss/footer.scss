@@ -1,0 +1,165 @@
+@mixin flex-colum-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin size-msj-mobile {
+    width: 150%;
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: $fontsize-xs;
+}
+@mixin size-msj-desktop {
+    width: 450px;
+    height: 30px;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: $fontsize-s;
+}
+/* vista mobile */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    footer {
+        width: 100%;
+        background-color: $colorhover;
+        color: $background-color;
+        @include flex-colum-center;
+        text-align: center;
+        .footer__info {
+            .pie__izq {
+                padding-top: 100px;
+                align-items: center;
+
+                .pie__contacto {
+                    padding-top: 50px;
+                    @include flex-colum-center;
+                }
+                .pie__dis {
+                    padding-top: 50px;
+                    @include flex-colum-center;
+                }
+                .punto {
+                    width: 12px;
+                    height: 12px;
+                    background-color: $green-color;
+                    border-radius: 50%;
+                }
+                .ul__datos {
+                    padding-top: 12px;
+                    font-size: $fontsize-s;
+                    color: $grey-color;
+                }
+                .ul__title {
+                    color: $background-color;
+                    font-size: $fontsize-m;
+                    padding-bottom: 7px;
+                }
+            }
+            .pie__der {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                .pie__form {
+                    @include flex-colum-center;
+                    .pie__nombre {
+                        @include size-msj-mobile;
+                    }
+                    .pie__correo {
+                        @include size-msj-mobile;
+                    }
+                    .pie__msj {
+                        @include size-msj-mobile;
+                        height: 110px;
+                    }
+                }
+            }
+        }
+        .pie__pagina {
+            padding-bottom: 30px;
+            border-top: 1px solid $color;
+            .piedepagina__refresh{
+                font-family: poppins regular;
+                font-size: $fontsize-m;
+                padding-top: 25px;
+            }
+            .piedepagina__terminos{
+                font-family: poppins Extralight;
+                font-size: $fontsize-s;
+                padding-bottom: 25px;
+            }
+        }
+    }
+}
+    /* vista desktop */
+@media only screen and (min-width: 768px) {
+    footer {
+        width: 100%;
+        background-color: $colorhover;
+        color: $background-color;
+        .footer__info {
+            display: flex;
+            flex-direction: 2 column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 50px;
+            .pie__izq {
+                .pie__contacto {
+                    padding-top: 60px;
+                    @include flex-colum-center;
+                }
+                .pie__dis {
+                    padding-top: 60px;
+                    @include flex-colum-center;
+                }
+                .punto {
+                    width: 12px;
+                    height: 12px;
+                    background-color: $green-color;
+                    border-radius: 50%;
+                }
+                .ul__datos {
+                    padding-top: 12px;
+                    font-size: $fontsize-m;
+                    color: $grey-color;
+                }
+                .ul__title {
+                    color: $background-color;
+                    font-size: $fontsize-l;
+                    padding-bottom: 7px; 
+                }
+            }
+            .pie__der {
+                padding-top: 50px;
+                .pie__form {
+                    @include flex-colum-center;
+                    .pie__nombre {
+                        @include size-msj-desktop;
+                    }
+                    .pie__correo {
+                        @include size-msj-desktop;
+                    }
+                    .pie__msj {
+                        @include size-msj-desktop;
+                        height: 160px;
+                    }
+                }
+            }
+        }
+        .pie__pagina {
+            padding-bottom: 10px;
+            border-top: 1px solid $color;
+            @include flex-colum-center;
+            .piedepagina__refresh{
+                font-family: poppins regular;
+                font-size: $fontsize-m;
+                padding-top: 25px;
+            }
+            .piedepagina__terminos{
+                font-family: poppins Extralight;
+                font-size: $fontsize-s;
+                padding-bottom: 25px;
+            }
+        }
+    }
+}
+    

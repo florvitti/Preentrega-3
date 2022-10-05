@@ -1,0 +1,264 @@
+/* vista mobile */
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .body__index {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "presentacion"
+        "servicios__title"
+        "servicios"
+        "metodologia__title"
+        "metodologia"
+        "metodologia__mas"
+        "proyectos__title"
+        "proyectos"
+        "footer";
+        grid-template-columns: 1;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+    header {
+        grid-area: header;
+    }
+    .presentacion {
+        grid-area: presentacion;
+        padding-top: 110px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        .p__div {
+            text-align: center;
+            .p__title {
+                color: $color-trans;
+                font-size: 20px;
+                font-style: normal;
+                letter-spacing: 5px;
+                padding-top: 50px;
+            }
+        }
+        .p__img {
+            width: 400px  
+        }
+    }
+    .servicios__title {
+        grid-area: servicios__title;
+    }
+    .servicios {
+        grid-area: servicios;
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .servicios__ux {
+            width: 350px;
+        }
+        .servicios__pdv {
+            width: 350px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .servicios__packaging {
+            width: 350px;
+        }
+    }
+    .metodologia__title {
+        grid-area: metodologia__title;
+        padding-top: 150px;
+        font-size: 22px;
+        font-style: normal;
+        letter-spacing: 7px;
+        color: $color-trans;
+        display: flex;
+        justify-content: center;
+    }
+    .metodologia {
+        grid-area: metodologia;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .metodologia__inv {
+            width: 300px;
+            padding-top: 30px;
+            text-align: center;
+        }
+        .metodologia__prop {
+            width: 300px;
+            padding-top: 30px;
+            text-align: center; 
+        }
+        .metodologia__des {
+            width: 300px;
+            padding-top: 30px;
+            text-align: center;
+        }
+    }
+    .metodologia__mas {
+        grid-area: metodologia__mas;
+        padding-top: 50px;
+        text-align: center;
+    }
+    .proyectos__title {
+        grid-area: proyectos__title
+    }
+    .proyectos {
+        grid-area: proyectos;
+        padding-top: 30px;
+        padding-bottom: 100px;
+        display: flex;
+        justify-content: space-evenly;
+        .proyectos__ind {
+            width: 250px;
+            transition: all 0.3s linear;
+            box-shadow: 0px 1px 10px #9090902b;
+            & :hover {
+                box-shadow: $box-shadow;
+            }
+        }
+        .proyectos__ux {
+            width: 250px;
+            transition: all 0.3s linear;
+            box-shadow: 0px 1px 10px #9090902b;
+            & :hover {
+            box-shadow: $box-shadow;
+            }
+        }
+    } 
+    footer {
+        grid-area: footer;
+    }
+}
+
+/* vista desktop */
+@media only screen and (min-width: 768px) {
+    .body__index {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "presentacion"
+        "servicios__title"
+        "servicios"
+        "metodologia__title"
+        "metodologia"
+        "metodologia__mas"
+        "proyectos__title"
+        "proyectos"
+        "footer";
+        grid-template-columns: 1;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+    header {
+        grid-area: header;
+    }
+    .presentacion {
+        grid-area: presentacion;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .p__div {
+            text-align: center;
+            .p__title {
+                color: $color-trans;
+                font-size: 23px;
+                font-style: normal;
+                letter-spacing: 5px;
+                padding-top: 50px;
+            }
+        }
+        .p__img {
+            width: 450px;
+            box-shadow: 0px 2px 30px #4d4d4d41;   
+        }
+    }
+    .servicios__title {
+        grid-area: servicios__title;
+    }
+    .servicios {
+        grid-area: servicios;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        .servicios__ux {
+            width: 350px;
+        }
+        .servicios__pdv {
+            width: 350px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .servicios__packaging {
+            width: 350px;
+        }
+    }
+    .metodologia__title {
+        grid-area: metodologia__title;
+        padding-top: 160px;
+        font-size: 35px;
+        font-style: normal;
+        letter-spacing: 10px;
+        color: $color-trans;
+        display: flex;
+        justify-content: center;
+    }
+    .metodologia {
+        grid-area: metodologia;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .metodologia__inv {
+            width: 300px;
+            padding-top: 30px;
+            text-align: center;
+        }
+        .metodologia__prop {
+            width: 300px;
+            padding-top: 30px;
+            text-align: center;   
+        }
+        .metodologia__des {
+            width: 300px;
+            padding-top: 30px;
+            text-align: center;   
+        }
+    }
+    .metodologia__mas {
+        grid-area: metodologia__mas;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 50px;    
+    }
+    .proyectos__title {
+        grid-area: proyectos__title;
+        padding-top: 110px;
+    }
+    .proyectos {
+        grid-area: proyectos;
+        padding-top: 60px;
+        padding-bottom: 200px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .proyectos__ind {
+            width: 320px;
+            transition: all 0.3s linear;
+            box-shadow: 0px 1px 10px #9090902b;
+            & :hover {
+                box-shadow: $box-shadow;
+            }
+        }
+        .proyectos__ux {
+            width: 320px;
+            transition: all 0.3s linear;
+            box-shadow: 0px 1px 10px #9090902b;
+            & :hover {
+                box-shadow: $box-shadow;
+            }
+        }
+    }
+    footer {
+        grid-area: footer;
+    }
+}

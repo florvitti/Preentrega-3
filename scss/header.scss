@@ -1,0 +1,54 @@
+
+    header {
+        background-color: $background-color;
+        box-shadow: $box-shadow;;
+        font-size: $fontsize-m;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 75px;
+        & a {
+            color: $color;
+        text-decoration: none;
+        }
+    }
+    .inicio {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .inicio__logo {
+            width: 100px;
+            padding-left: 100px;
+        }
+        .inicio__menu {
+            display: flex;
+            align-items: center;
+            & ul {
+                margin: 0;
+                padding: 22px 0;
+                padding-right: 100px;
+                list-style: none;
+                & li {
+                    display: inline-block;
+                    & a {
+                        display: block;
+                        padding: 5px 10px;
+                        transition: all 0.3s linear;
+                        &:hover, &.active {
+                            color: $colorhover;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+            .inicio__list {
+                margin-right: 100px;
+                cursor: pointer;
+                display: none;
+            }
+            #check {
+                display: none;
+            }
+        }
+    }
